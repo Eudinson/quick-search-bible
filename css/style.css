@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+html{
+    font-size: 100%;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+    "header container container"
+    "header container container";
+}
+
+.search-btn{
+    height: 4rem;
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+    display: none;
+}
+
+.header{
+    grid-area: header;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    background-color: #fff;
+}
+
+#logo-2{
+    position: relative;
+    margin: -5rem;
+}
+
+.img-container{
+    padding: 0 1rem;
+    margin: 2rem;
+}
+
+#bible-img{
+    height: 5rem;
+}
+
+.header-1{
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+    color: #34495E;
+}
+
+.header-2{
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.1rem;
+    color: #34495E;
+}
+
+.header-2 a{
+    text-decoration: none;
+}
+
+.testament-container{
+    margin-top: 2rem;
+    position: relative;
+}
+
+.radio-container{
+    margin-top: 1rem;
+}
+
+.testament-title{
+    font-family: 'Comfortaa', cursive;
+    margin-bottom: .5rem;
+    color: #34495E;
+}
+
+.radio-container{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+}
+
+.tes-radio{
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked+label{
+    font-weight: bold;
+    color: white;
+    background-color: #E74C3C;
+    border: 3px solid #F5B7B1;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+}
+
+label{
+    transition: .3s ease;
+    letter-spacing: .2rem;
+    color: #34495E;
+}
+
+.container{
+    padding: 2rem;
+    height: 100vh;
+    grid-area: container;
+    overflow-y: scroll;
+    background: url('../imgs/animated-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+}
+
+.passageTitle{
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #fff;
+    letter-spacing: .1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    padding-bottom: .5rem;
+}
+
+.passage{
+    color: white;
+    font-size: 1.3rem;
+}
+
+
+.drop-down-container{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+#cboBox{
+    height: 2rem;
+    width: 12rem;
+    border-radius: .3rem;
+    outline-style: none;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    border: 2px solid #34495E;
+    font-size: 1rem;
+}
+
+input[type="text"]{
+    margin: .2rem 0;
+    padding: .5rem .3rem;
+    border-style: none;
+    border-radius: 5px;
+    border: 2px solid #34495E;
+    font-size: .7rem;
+}
+
+.btn-search{
+    padding: .7rem 0;
+    margin: .5rem 0;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    outline-style: none;
+    background-color:#2471A3;
+    color: #fff;
+    font-size: 1rem;
+    transition: .2s ease-in-out;
+}
+
+.btn-search:hover{
+    transform: scale(1.1);
+}
+
+.footer{
+    margin-top: 3rem;
+}
+
+h6{
+    font-size: .8rem;
+    margin: .5rem 0;
+}
+
+
+@media(max-width:1024px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media(max-width:415px){
+    html{
+        font-size: 65%;
+    }
+
+    
+body{
+    display: grid;
+    grid-template-columns: 0 3fr;
+    grid-template-areas: 
+    "header container container"
+    "header container container";
+}
+
+.hideHeader{
+    transform: translateX(-100%);
+}
+
+.search-btn{
+    height: 4rem;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    display: block;
+    margin: 1rem;
+    opacity: .7;
+    animation: grow .5s ease-in-out infinite;
+}
+
+@keyframes grow {
+    0%{
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.1);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.img-container{
+    margin-top: -1.5rem;
+}
+
+.title-container{
+    margin-top: -3rem;
+}
+
+.header{
+    min-height: 100vw;
+    z-index: 2;
+    position: absolute;
+    transition: .3s ease-in-out;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vw;
+}
+
+.passageTitle{
+    margin-top: 4rem;
+}
+}

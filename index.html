@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bible Quick Search</title>
+
+    <link rel="icon" href="imgs/bible.png">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <img src="imgs/search-icon.png" alt="search" class="search-btn">
+    <header class="header">
+        <div class="img-container">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player id="logo-2" src="https://assets6.lottiefiles.com/packages/lf20_6Uw3un.json"
+                background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+        </div>
+        <div class="title-container">
+            <h1 class="header-1">Bible Quick Search</h1>
+            <h2 class="header-2">World English Bible Version</h2>
+        </div>
+        <div class="testament-container">
+            <h3 class="testament-title">Choose Testament</h3>
+            <div class="radio-container">
+                <div class="old-container">
+                    <input type="radio" id="tesOld" class="bookSelector" name="books" value="old" checked>
+                    <label for="tesOld" class="tes-radio">Old</label>
+                </div>
+                <div class="new-container">
+                    <input type="radio" id="tesNew" class="bookSelector" name="books" value="new">
+                    <label for="tesNew" class="tes-radio">New</label>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+
+    </div>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>

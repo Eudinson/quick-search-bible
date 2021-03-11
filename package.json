@@ -4,6 +4,7 @@
   "description": "for quick searching of bible app",
   "main": "index.js",
   "scripts": {
+    "predeploy": "npm run public",
     "deploy": "gh-pages -d public"
   },
   "homepage": "https://github.com/Eudinson/quick-search-bible",

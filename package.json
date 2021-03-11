@@ -4,11 +4,13 @@
   "description": "for quick searching of bible app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d public"
   },
+  "homepage": "https://github.com/Eudinson/quick-search-bible",
   "author": "eudin",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "gh-pages": "^3.1.0"
   }
 }
